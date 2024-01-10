@@ -1,11 +1,10 @@
 
 //# FUNZIONI
-const cellGenerator = (content) =>{
+const cellGenerator = () =>{
     //CREO ELEMENTO CELLA
     const cellElement =document.createElement('div');
     // GLI DO LA CLASSE
     cellElement.classList.add('cell');
-    cellElement.innerText = content;
     return cellElement
 }
 
@@ -25,8 +24,7 @@ button.addEventListener('click', function(){
     }else{
         for(let i = 1; i <= totalCell; i++){
             //CREO LA CELLA
-            let cellElement = cellGenerator(i);
-            console.log('sono la cella', cellElement)
+            let cellElement = cellGenerator();
     
             // AGGANGIO LA CELLA ALLA GRIGLIA
             gridElement.appendChild(cellElement);
@@ -37,7 +35,9 @@ button.addEventListener('click', function(){
             hasCells = true
             // CREO EVENT LISTNER SULLA CELLA
             cellElement.addEventListener('click', function(){
-                console.log('SONO LA CELLA', cellElement);
+                
+                //STAMPO IN CONSOLE IL NUMERO DELLA CELLA
+                console.log('sono la cella', i)
     
                 // COLORO LA CELLA DI BLU AL CLICK
                 cellElement.classList.add('clicked');
