@@ -8,10 +8,9 @@
 /* GENERICS */
 .container{
     width: 1200px;
-}
-
-body{
-    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* HEADER */
@@ -20,7 +19,6 @@ header{
     background-color: white;
     display: flex;
     justify-content: space-between;
-    background-color: red;
     margin: 30px 20px;
 }
 
@@ -48,8 +46,36 @@ img{
 main{
     background-color: aquamarine;
     height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.grid{
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+}
+
+.grid .cell{
+    width: calc(700px / 10);
+    height: calc(700px / 10);
+    border: 1px dashed black;
+    cursor: pointer;
+}
+
+.cell.clicked{
+    background-color: blue;
+}
+
+
+
+
+
+/* FOOTER */
 footer{
     height: 50px;
 }
