@@ -17,7 +17,7 @@ const rows = 10;
 const cols = 10;
 const totalCell = rows * cols;
 
-//CREO EVENT LISTNER
+//CREO EVENT LISTNER SUL BOTTONE
 button.addEventListener('click', function(){
     for(let i = 1; i <= totalCell; i++){
         //CREO LA CELLA
@@ -26,9 +26,15 @@ button.addEventListener('click', function(){
         gridElement.appendChild(cellElement);
         // AGGIUNGO IL NUMERO ALLA CELLA
         cellElement.innerText = i;
-
+        // CREO EVENT LISTNER SULLA CELLA
+        cellElement.addEventListener('click',function(){
+            //AGGIUNGO IL NUMERO ALLA CELLA
+            console.log(i)
+            // COLORO LA CELLA DI BLU AL CLICK
+            cellElement.classList.add('clicked')
+            console.log(cellElement);
+        })
     }
-
-
 })
+
 
