@@ -55,12 +55,12 @@ main{
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+    /* align-content: flex-start; */
 }
 
 .grid .cell{
-    width: calc(700px / 10);
-    height: calc(700px / 10);
+    width: calc(100% / 10);
+    height: calc(100% / 10);
     border: 1px dashed black;
     cursor: pointer;
 }
