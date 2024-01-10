@@ -3,10 +3,8 @@
 const cellGenerator = () =>{
     //CREO ELEMENTO CELLA
     const cellElement =document.createElement('div');
-    console.log(cellElement)
     // GLI DO LA CLASSE
     cellElement.classList.add('cell');
-    console.log(cellElement)
     return cellElement
 }
 
@@ -22,10 +20,15 @@ const totalCell = rows * cols;
 //CREO EVENT LISTNER
 button.addEventListener('click', function(){
     for(let i = 1; i <= totalCell; i++){
-        // AGGANGIO ALLA GRIGLIA
+        //CREO LA CELLA
         const cellElement = cellGenerator();
+        // AGGANGIO LA CELLA ALLA GRIGLIA
         gridElement.appendChild(cellElement);
-        console.log(gridElement)
+        // AGGIUNGO IL NUMERO ALLA CELLA
+        cellElement.innerText = i;
+
     }
+
+
 })
 
