@@ -1,6 +1,16 @@
 
-//# RECUPERO GLI ELEMENTI
+//# FUNZIONI
+const cellGenerator = () =>{
+    //CREO ELEMENTO CELLA
+    const cellElement =document.createElement('div');
+    console.log(cellElement)
+    // GLI DO LA CLASSE
+    cellElement.classList.add('cell');
+    console.log(cellElement)
+    return cellElement
+}
 
+//# RECUPERO GLI ELEMENTI
 const gridElement = document.querySelector('.grid');
 
 const button = document.querySelector('button');
@@ -11,21 +21,11 @@ const totalCell = rows * cols;
 
 //CREO EVENT LISTNER
 button.addEventListener('click', function(){
-    
-    const cellGenerator = () =>{
-        for(let i = 1; i<= totalCell;i++){
-            //CREO ELEMENTO CELLA
-            const cellElement =document.createElement('div');
-            // GLI DO LA CLASSE
-            cellElement.classList.add('cell');
-            // AGGANGIO ALLA GRIGLIA
-            gridElement.appendChild(cellElement);
-        }
-        }
-        cellGenerator()
-
-
-
-
+    for(let i = 1; i <= totalCell; i++){
+        // AGGANGIO ALLA GRIGLIA
+        const cellElement = cellGenerator();
+        gridElement.appendChild(cellElement);
+        console.log(gridElement)
+    }
 })
 
