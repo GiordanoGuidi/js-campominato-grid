@@ -21,7 +21,7 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 Note:
 - questo bonus richiederà un evento diverso dal 'click'
-- questo bonus richiederà una riflessione extra per quel che riguarda il calcolo della larghezza delle celle ;)
+- questo bonus richiederà una riflessione extra per quel che riguarda il calcolo della larghezza delle celle ;
 Consigli del giorno:  :party_wizard:
 Scriviamo prima cosa vogliamo fare passo passo in italiano, dividiamo il lavoro in micro problemi.
 Ad esempio:
@@ -29,3 +29,6 @@ Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 buon lavoro! 
+
+# PROBLEM BREAKDOWN
+1. CREO CON CSS E HTML IL RISULTATO GRAFICO
