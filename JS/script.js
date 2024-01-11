@@ -1,40 +1,53 @@
 
 //# FUNZIONI
-const cellGenerator = () =>{
+const cellGenerator = (mode) =>{
     //CREO ELEMENTO CELLA
     const cellElement =document.createElement('div');
     // GLI DO LA CLASSE
     cellElement.classList.add('cell');
+    if(mode ==='2'){
+        cellElement.classList.add('cell','medium')
+    }else if(mode === '3'){
+        cellElement.classList.add('cell','hard')
+    }
     return cellElement
 }
 
 //# RECUPERO GLI ELEMENTI
 const formElement = document.querySelector('form')
 const selectElement = document.querySelector('select')
-console.log(formElement,selectElement)
 const button = document.querySelector('button');
-
-
-
 const gridElement = document.querySelector('.grid');
-
-
-const rows = 10;
-const cols = 10;
-const totalCell = rows * cols;
+let rows = 10;
+let cols = 10;
+let totalCell = rows * cols;
 let hasCells = false;
-const mode = selectElement.value;
+console.log('celle totali',totalCell)
 
 //CREO EVENT LISTNER SUL BOTTONE
 formElement.addEventListener('submit', function(event){
     event.preventDefault();
     
+    let mode = selectElement.value;
+    console.log(mode);
+    // CAMBIO GRANDEZZA GRIGLIA IN BASE ALLA MODALITA' SCELTA
+    if(mode === '2'){
+        rows = 9;
+        cols = 9;
+        totalCell = rows * cols;
+        console.log('righe',rows,'colonne',cols,'celle totali',totalCell)
+    }else if(mode === '3'){
+        rows = 7;
+        cols = 7;
+        totalCell = rows * cols;
+    }
+
     if(hasCells){
         return;
     }else{
         for(let i = 1; i <= totalCell; i++){
             //CREO LA CELLA
-            let cellElement = cellGenerator();
+            let cellElement = cellGenerator(mode);
     
             // AGGANGIO LA CELLA ALLA GRIGLIA
             gridElement.appendChild(cellElement);
