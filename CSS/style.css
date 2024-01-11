@@ -30,6 +30,12 @@ header{
 .right-header{
     display: flex;
     align-items: center;
+    margin-right: 300px;
+}
+
+select{
+    margin-right: 20px;
+    font-size: 1rem;
 }
 
 button{
@@ -40,6 +46,8 @@ button{
 img{
     max-width: 60px;
 }
+
+
 /* MAIN */
 main{
     background-color: aquamarine;
